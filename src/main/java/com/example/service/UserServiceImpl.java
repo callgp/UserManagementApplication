@@ -7,6 +7,7 @@ import java.util.Random;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.dto.LoginFormDTO;
 import com.example.dto.RegisterFormDTO;
@@ -21,6 +22,7 @@ import com.example.repo.CountryRepo;
 import com.example.repo.StateRepo;
 import com.example.repo.UserRepo;
 
+@Service
 public class UserServiceImpl implements UserService {
 	@Autowired
 	private CountryRepo countryRepo;
