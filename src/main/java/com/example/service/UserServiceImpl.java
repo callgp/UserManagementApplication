@@ -131,11 +131,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public boolean resetPwd(ResetPwdFormDTO resetPwdDTO) {
+	public boolean resetPwd(ResetPwdFormDTO resetPwdDTO) { 
 		// TODO Auto-generated method stub
 		String email = resetPwdDTO.getEmail();
 		
-		UserEntity entity = userRepo.findByEmailAndPwd(email, email);
+		UserEntity entity = userRepo.findByEmail(email);
 		entity.setPwd(resetPwdDTO.getNewPwd());
 		entity.setPwdUpdated("Yes");
 		userRepo.save(entity);
